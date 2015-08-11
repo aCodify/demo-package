@@ -17,13 +17,13 @@ gulp.task('templates', function() {
 });
 
 gulp.task('connect-sync', function() {
-    connect.server({}, function (){
-        browserSync({
-            open: false,
-            proxy: 'localhost:4321',
-            port: 1234
-        });
-    });
+  browserSync({
+    open: false,
+    baseDir: 'app/',
+    proxy: 'localhost:4321',
+    port: 1234
+  });
+
 });
 
 gulp.task('php', function() {
